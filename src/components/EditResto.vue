@@ -11,12 +11,8 @@
       <button class="btn btn-sm btn-danger" @click="removeAllRestos">Tout supprimer</button>
     </div>
     <div class="col-md-8">
-      <div v-if="currentResto">
+      <div>
         <resto-details :resto="currentResto" @refreshList="refreshList"/>
-      </div>
-      <div v-else>
-        <br />
-        <p>Veuillez cliquer sur un restaurant</p>
       </div>
     </div>
   </div>
