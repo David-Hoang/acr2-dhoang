@@ -1,6 +1,6 @@
 <template>
     <h1>RestoNote</h1>
-    <agile :nav-buttons="false" :autoplay-speed="10000" :speed="2500" :dots="false" autoplay fade>
+    <agile :nav-buttons="false" :autoplay-speed="5000" :speed="2500" :dots="false" autoplay fade>
         <div class="slide">
             <div class="img-slide">
             <img src="../assets/carousel-1.jpg" alt="table-restaurant">
