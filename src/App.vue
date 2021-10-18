@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <router-link to="/" class="navbar-brand"><img src="@/assets/restonote_logo_long_white.png" alt="restonote_logo"/></router-link>
-      <div class="navbar-nav mr-auto">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmobile" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="navbar-nav mr-auto collapse navbar-collapse" id="navbarmobile">
 
         <li class="nav-item">
           <router-link to="/listing" class="nav-link">Listing</router-link>
