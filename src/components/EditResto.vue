@@ -63,6 +63,9 @@ export default {
     },
 
     removeAllRestos() {
+      let popup = confirm('Voulez vous vraiment tout supprimer ?');
+
+      if(popup == true) {
       RestoDataService.deleteAll()
         .then(() => {
           this.refreshList();
@@ -70,6 +73,10 @@ export default {
         .catch((e) => {
           console.log(e);
         });
+        alert('Vous avez supprimé toutes les enseignes');
+      } else {
+        alert('Vous n\'avez pas supprimé toutes les enseignes');
+      }
     },
   },
   mounted() {

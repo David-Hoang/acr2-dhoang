@@ -84,13 +84,19 @@ export default {
     },
 
     deleteResto() {
+      let popup = confirm('Voulez-vous vraiment supprimer l\'enseigne '+this.currentResto.title+' ?');
+
+      if(popup == true) {
       RestoDataService.delete(this.currentResto.key)
         .then(() => {
           this.$emit("refreshList");
         })
         .catch((e) => {
           console.log(e);
-        });
+        })
+      } else {
+        alert('L\'enseigne ' +this.currentResto.title+ ' n\'a pas été supprimé');
+      }
     },
   },
   mounted() {
@@ -113,6 +119,11 @@ h4 {
 
 .boutt {
   text-align: center;
+}
+
+.boutt p {
+  color : #22e608;
+  margin : 0 0 3rem 0;
 }
 
 .btn-sm {
